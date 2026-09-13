@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "overlays": [
+    {
+      "source": "patches/a11y-fixes.css",
+      "target": "assets/css/a11y-fixes.css",
+      "kind": "style",
+      "bytes": 1008,
+      "sha256": "3d9c572df12e12df7f764198364867a6fd5aa67332347c88f256684c18bb63d1"
+    },
+    {
+      "source": "patches/a11y-fixes.js",
+      "target": "assets/js/a11y-fixes.js",
+      "kind": "script",
+      "bytes": 2927,
+      "sha256": "b132659efcec998e2eb1f84dbe5ba9de2974b70d4224415c11ba2606bd943dcd"
+    }
+  ],
+  "final_index": {
+    "bytes": 66796,
+    "sha256": "c69296e19961af421fbde9f165cce2e51c1c4e3c87dbc7ff9d558fc552b05115"
+  }
+}

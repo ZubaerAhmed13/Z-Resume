@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "encoding": "utf-8",
+  "archive": "tar.xz",
+  "files": [
+    {
+      "target": "index.html",
+      "sha256": "d9dd739c54745e35797eeceea7b2c94ffd92eb02b205dde3d3725efcf07e194d",
+      "bytes": 66691
+    },
+    {
+      "target": "assets/css/app-base.css",
+      "sha256": "376853b05e0cb7b75160ec5e973c7df58b2560837c0675afcb297bcac00330ad",
+      "bytes": 66134
+    },
+    {
+      "target": "assets/css/app-enhancements.css",
+      "sha256": "de9ec83b119a04963ec8c4825148a2e1bf5879c61dd3a2bc357f3a515ae7c7b9",
+      "bytes": 33280
+    },
+    {
+      "target": "assets/js/bundle-00-core.js",
+      "sha256": "703b2ace171ca7d0ce4338bb49d7cadb4bfe33466c421b12b27de1d7d7a2ebf9",
+      "bytes": 81751
+    },
+    {
+      "target": "assets/js/bundle-01-ui-analysis.js",
+      "sha256": "b7f9af303a4aea7a543ed7af336dfce9d7b50dacb77ecee2b7f3df8a9b9850ad",
+      "bytes": 76843
+    },
+    {
+      "target": "assets/js/bundle-02-import-onboarding.js",
+      "sha256": "dac32d805f8224496c9f00db36cffdf713440f3ae1eab19c112cdd02622cad92",
+      "bytes": 78255
+    },
+    {
+      "target": "assets/js/bundle-03-workspace-ai-gate.js",
+      "sha256": "dcd925433058579cbceb328afc53b33e8fedc80d5d8930224d0c223575991aab",
+      "bytes": 72799
+    },
+    {
+      "target": "assets/js/bundle-04-photo-order-export.js",
+      "sha256": "e6cffa3c40004dc46af88b68cfe626f72d0c3a71320c4670398754e0a205f320",
+      "bytes": 60269
+    },
+    {
+      "target": "assets/js/bundle-05-enhancements.js",
+      "sha256": "bb67d3cffb9a9eb409f6da6a27893660703bb8f4a544556b7fa67138edfaee19",
+      "bytes": 59740
+    },
+    {
+      "target": "assets/js/bundle-06-shell-hardening.js",
+      "sha256": "6c7a8d673d0aa46e29ccde09e94996f5d3abeb088e3caf9381e90159bc4ea785",
+      "bytes": 57200
+    }
+  ],
+  "parts": [
+    "src/site-pack/part-000.b64",
+    "src/site-pack/part-001.b64",
+    "src/site-pack/part-002.b64",
+    "src/site-pack/part-003.b64",
+    "src/site-pack/part-004.b64",
+    "src/site-pack/part-005.b64",
+    "src/site-pack/part-006.b64",
+    "src/site-pack/part-007.b64",
+    "src/site-pack/part-008-00.b64",
+    "src/site-pack/part-008-01.b64",
+    "src/site-pack/part-008-02.b64",
+    "src/site-pack/part-008-03.b64",
+    "src/site-pack/part-009.b64"
+  ],
+  "archive_sha256": "18d20c8df3d86e99447f81be0e6031ec999aad2ae1876ff211dac78fc25490d5",
+  "archive_bytes": 143020
+}

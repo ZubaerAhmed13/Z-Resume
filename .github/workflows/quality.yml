@@ -1,0 +1,42 @@
+name: quality
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  hardening-and-exports:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reconstruct verified static site
+        run: python scripts/build_site.py --output .
+      - name: Static hardening and JavaScript syntax
+        run: |
+          python tests/test_static_hardening.py
+          for f in assets/js/*.js; do node --check "$f"; done
+      - name: Install browser/export/accessibility validators
+        run: |
+          python -m pip install --disable-pip-version-check playwright
+          npm install --no-save --ignore-scripts axe-core@4.13.0
+          sudo apt-get update
+          sudo apt-get install -y chromium poppler-utils libreoffice-writer
+      - name: Browser, template, security, accessibility, PDF and DOCX tests
+        env:
+          REQUIRE_AXE: '1'
+        run: python tests/test_browser_workflows.py
+      - name: LibreOffice DOCX opening validation
+        run: |
+          mkdir -p test-artifacts/lo-ci
+          libreoffice --headless --convert-to pdf --outdir test-artifacts/lo-ci test-artifacts/resume.docx
+          test -s test-artifacts/lo-ci/resume.pdf
+          pdfinfo test-artifacts/lo-ci/resume.pdf
