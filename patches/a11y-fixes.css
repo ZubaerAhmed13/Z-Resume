@@ -1,0 +1,43 @@
+/* Accessibility hardening layered after the legacy visual theme. */
+@media screen {
+  .brand-sub,
+  .panel-intro p {
+    color:#475569 !important;
+  }
+
+  .tnav.active,
+  #btn-home.active {
+    color:#005bb5 !important;
+  }
+
+  .save-status {
+    color:#475569 !important;
+  }
+  .save-status.saving {
+    color:#1e40af !important;
+    background:#eff6ff !important;
+  }
+  .save-status.unsaved {
+    color:#92400e !important;
+    background:#fffbeb !important;
+  }
+  .save-status.error {
+    color:#991b1b !important;
+    background:#fef2f2 !important;
+  }
+
+  html[data-theme="dark"] .brand-sub,
+  html[data-theme="dark"] .panel-intro p {
+    color:#d1d5db !important;
+  }
+  html[data-theme="dark"] .tnav.active,
+  html[data-theme="dark"] #btn-home.active {
+    color:#93c5fd !important;
+  }
+  html[data-theme="dark"] .save-status,
+  html[data-theme="dark"] .save-status.saving,
+  html[data-theme="dark"] .save-status.unsaved,
+  html[data-theme="dark"] .save-status.error {
+    color:#f3f4f6 !important;
+  }
+}
